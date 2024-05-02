@@ -1,0 +1,44 @@
+## **Criando nossa prórpia imagem do MySQL**
+
+Para que possamos criar nossa imagem, precisaremos basicamente de dois arquivos.
+O primeiro é o Dockerfile.
+Nesse arquivo estão contidas informações que são importantes para o Docker criar nossa imagem corretamente.
+
+`filename: Dockerfile`
+```Dockerfile
+FROM mysql:latest
+ENV MYSQL_ROOT_PASSWORD=root
+ENV MYSQL_USER=admin
+ENV MYSQL_PASSWORD=root
+COPY ./SQL_Initiaze.sql /docker-entrypoint-initdb.d/
+```
+O segundo arquivo, é onde ficaram os scripts SQL, para criação de nossa database, tabelas, e valores padrão conforme necessário para nossa aplicação.
+
+`filename: sql_initialize.sql`
+```sql
+create database pessoa;
+use pessoa;
+
+CREATE TABLE pessoas(
+    PessoaID int AUTO_INCREMENT,
+    PrimeiroNome varchar(100) not null ,
+    UltimoNome varchar(100) not null,
+    primary key (PessoaID)
+);
+
+SET character_set_client = utf8;
+SET character_set_connection = utf8;
+SET character_set_results = utf8;
+SET collation_connection = utf8_general_ci;
+
+insert into pessoas(primeironome, ultimonome) values
+('Lucas', 'Alberto'), ('João', 'Batista');
+```
+
+Vá até o Hub do Docker https://hub.docker.com/ e crie um novo repositório.
+Caso não tenha uma conta no Docker, crie-a;
+
+Com abra o terminal, dentro do diretório em que os arquivos foram criados, e digite:
+```cmd
+C:\mysql> docker build -t repository/mysql_db
+```
