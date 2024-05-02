@@ -14,7 +14,7 @@ COPY ./SQL_Initiaze.sql /docker-entrypoint-initdb.d/
 ```
 O segundo arquivo, é onde ficaram os scripts SQL, para criação de nossa database, tabelas, e valores padrão conforme necessário para nossa aplicação.
 
-`filename: sql_initialize.sql`
+`filename: SQL_initialize.sql`
 ```sql
 create database pessoa;
 use pessoa;
