@@ -42,10 +42,16 @@ Com abra o terminal, dentro do diretório em que os arquivos foram criados, e di
 ```cmd
 C:\mysql> docker build -t seu_nome_de_usuario/mysql_db
 ```
-É importante fazer a build de sua imagem, observando a sintaxe: `user\nome_imagem`, senão será necessário adicionar uma tag ao seu repositório local;
+É importante fazer a build de sua imagem, observando a sintaxe: `user/nome_imagem`, senão será necessário adicionar uma tag ao seu repositório local;
 
 Feita a build de nossa imagem, é possível agora criar uma instância dela:
 
 ```cmd
 docker run -d -p 3306:3306 seu_nome_de_usuario/mysql_db
 ```
+
+Verifique se você está logado no Docker Hub, assim é possível fazer o `push` dessa imagem para nosso repositório no Hub agora:
+```cmd
+docker push nome_de_seu_usuario/imagem
+```
+Como dito anteriormente, é importante que o repositório do Hub e sua imagem tenha o mesmo nome.
