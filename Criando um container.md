@@ -13,6 +13,17 @@ Após isso iremos criar um container do MySQL, com as seguintes configurações:
 -Um usuário: admin e senha: root
 -mysql (indica qual imagem queremos instanciar)
 
-```
+```cmd
 docker run -d --name mysqlContainer -p 3306:3306 -e MYSQL_ROOT_PASSWORD=root -e MYSQL_DATABASE=dockerDatabase -e MYSQL_USER=admin -e MYSQL_PASSWORD=root mysql
 ```
+
+Para verificar se o container foi criado e está rodando:
+```cmd
+docker ps
+```
+```cmd
+CONTAINER ID   IMAGE          COMMAND                  CREATED          STATUS          PORTS                               NAMES
+24c0f0e57b3a   b2c0c7161966   "docker-entrypoint.s…"   38 minutes ago   Up 38 minutes   0.0.0.0:3306->3306/tcp, 33060/tcp   practical_torvalds
+```
+
+
