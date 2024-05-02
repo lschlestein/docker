@@ -40,5 +40,12 @@ Caso não tenha uma conta no Docker, crie-a;
 
 Com abra o terminal, dentro do diretório em que os arquivos foram criados, e digite:
 ```cmd
-C:\mysql> docker build -t repository/mysql_db
+C:\mysql> docker build -t seu_nome_de_usuario/mysql_db
+```
+É importante fazer a build de sua imagem, observando a sintaxe: `user\nome_imagem`, senão será necessário adicionar uma tag ao seu repositório local;
+
+Feita a build de nossa imagem, é possível agora criar uma instância dela:
+
+```cmd
+docker run -d -p 3306:3306 seu_nome_de_usuario/mysql_db
 ```
