@@ -38,7 +38,7 @@ insert into pessoas(primeironome, ultimonome) values
 Vá até o Hub do Docker https://hub.docker.com/ e crie um novo repositório.
 Caso não tenha uma conta no Docker, crie-a;
 
-Com abra o terminal, dentro do diretório em que os arquivos foram criados, e digite:
+Via terminal, dentro do diretório em que os arquivos foram criados, e digite:
 ```cmd
 C:\mysql> docker build -t seu_nome_de_usuario/mysql_db
 ```
