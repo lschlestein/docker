@@ -1,4 +1,4 @@
-## **Após instalar o docker, e certificar-se que o mesmo está rodando:**
+## **2-Após instalar o docker, e certificar-se que o mesmo está rodando:**
 
 Abra o prompt de comando e digite:
 ```cmd
