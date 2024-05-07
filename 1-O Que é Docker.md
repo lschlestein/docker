@@ -1,5 +1,5 @@
 
-# **O que é Docker?**
+# **1-O que é Docker?**
 A palavra "Docker" tem várias definições: um projeto da comunidade open source; as ferramentas resultantes desse projeto; a empresa Docker Inc., principal apoiadora do projeto; e as ferramentas compatíveis formalmente com a empresa. O fato da empresa e das tecnologias terem o mesmo nome pode causar alguma confusão.
 Veja uma breve explicação:
 - O software de TI "Docker" é uma tecnologia de conteinerização para criação e uso de containers Linux®.
