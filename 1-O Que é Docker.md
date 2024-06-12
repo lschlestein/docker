@@ -6,4 +6,4 @@ Veja uma breve explicação:
 - A comunidade open source do Docker trabalha gratuitamente para melhorar essas tecnologias para todos os usuários.
 - A empresa Docker Inc. se baseia no trabalho realizado pela comunidade do Docker, tornando-o mais seguro, e compartilha os avanços com a comunidade em geral. Depois, ela oferece aos clientes empresariais o suporte necessário para as tecnologias, que foram aprimoradas e fortalecidas.
 
-Com o Docker, é possível lidar com os containers como se fossem máquinas virtuais modulares e extremamente lightweight. Além disso, os containers oferecem maior flexibilidade para você criar, implantar, copiar e migrar um container de um ambiente para outro. Isso otimiza as apps na nuvem.
+Com o Docker, é possível lidar com os containers como se fossem máquinas virtuais modulares e extremamente leves. Além disso, os containers oferecem maior flexibilidade para você criar, implantar, copiar e migrar um container de um ambiente para outro. Isso otimiza as apps na nuvem.
