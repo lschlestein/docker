@@ -35,7 +35,42 @@ A plataforma baseada em contêiner do Docker permite cargas de trabalho altament
 Docker é leve e rápido, oferecendo uma alternativa econômica às máquinas virtuais baseadas em hipervisor. Isso permite uma maior utilização do servidor, sendo ideal para ambientes de alta densidade e para implantações pequenas e médias, onde a eficiência de recursos é crucial.
 
 ### Arquitetura Docker
-
 Docker utiliza uma arquitetura cliente-servidor. O cliente Docker se comunica com o daemon Docker, responsável por construir, executar e distribuir os contêineres. Cliente e daemon podem estar no mesmo sistema ou em sistemas diferentes, conectados via API REST, soquetes UNIX ou interface de rede. Outra ferramenta é o Docker Compose, que facilita o trabalho com aplicações compostas por múltiplos contêineres.
-
 Com o Docker, é possível lidar com os containers como se fossem máquinas virtuais modulares e extremamente leves. Além disso, os containers oferecem maior flexibilidade para você criar, implantar, copiar e migrar um container de um ambiente para outro. Isso otimiza as apps na nuvem.
+
+### O Daemon Docker
+O daemon Docker (dockerd) escuta solicitações da API Docker e gerencia objetos Docker, como imagens, contêineres, redes e volumes. Ele também pode se comunicar com outros daemons para gerenciar serviços Docker.
+
+### O Cliente Docker
+O cliente Docker (docker) é a principal interface pela qual os usuários interagem com o Docker. Quando comandos como docker run são utilizados, o cliente envia essas instruções para o dockerd, que as executa. O cliente Docker pode se comunicar com múltiplos daemons.
+
+### Área de Trabalho Docker
+Docker Desktop é um aplicativo fácil de instalar para Mac, Windows ou Linux, que permite criar e compartilhar aplicativos e microsserviços em contêineres. Ele inclui o daemon Docker (dockerd), o cliente Docker (docker), Docker Compose, Docker Content Trust, Kubernetes e Credential Helper. Para mais informações, consulte Docker Desktop.
+
+### Registros Docker
+Um registro Docker armazena imagens Docker. O Docker Hub é um registro público padrão, mas você pode configurar e utilizar registros privados. Com os comandos docker pull ou docker run, o Docker obtém imagens do registro configurado. O comando docker push envia suas imagens para o registro configurado.
+
+### Objetos Docker
+No Docker, você cria e utiliza imagens, contêineres, redes, volumes, plugins e outros objetos. Abaixo, uma visão geral desses objetos:
+
+### Imagens
+Uma imagem é um modelo somente leitura com instruções para criar um contêiner Docker. Imagens geralmente são baseadas em outras imagens com personalizações adicionais. Por exemplo, uma imagem baseada no Ubuntu pode incluir o servidor web Apache e seu aplicativo com as configurações necessárias. Imagens podem ser criadas por você ou obtidas de terceiros em registros Docker. Para criar uma imagem, usa-se um Dockerfile que define as etapas necessárias. Cada instrução no Dockerfile adiciona uma camada à imagem, tornando-as leves e rápidas, pois apenas as camadas alteradas são reconstruídas.
+
+### Contêineres
+Um contêiner é uma instância executável de uma imagem. Você pode criar, iniciar, parar, mover ou excluir um contêiner usando a API Docker ou CLI. Contêineres podem ser conectados a redes, ter armazenamento anexado ou servir como base para novas imagens. Por padrão, contêineres são isolados uns dos outros e da máquina host, com opções configuráveis de isolamento. Um contêiner é definido pela sua imagem e pelas opções de configuração usadas na sua criação ou início. Alterações não armazenadas de forma persistente desaparecem quando o contêiner é removido.
+
+## Exemplo de Comando docker run
+
+O comando a seguir executa um contêiner Ubuntu, anexando-se interativamente à sua sessão de linha de comando local e executando /bin/bash:
+
+``` bash
+docker run -i -t ubuntu /bin/bash
+```
+Ao executar esse comando, os seguintes passos ocorrem (supondo que você esteja usando a configuração de registro padrão):
+
+- Se a imagem ubuntu não estiver disponível localmente, o Docker a extrai do registro configurado.
+- O Docker cria um novo contêiner.
+- Um sistema de arquivos de leitura e gravação é alocado para o contêiner, permitindo modificações.
+- Uma interface de rede é criada para o contêiner, atribuindo-lhe um endereço IP, permitindo conexões a redes externas.
+- O Docker inicia o contêiner e executa /bin/bash. Como o contêiner está interativo e conectado ao terminal (devido aos sinalizadores -i e -t), você pode interagir com ele via teclado enquanto a saída é registrada no terminal.
+- Ao encerrar o comando /bin/bash com exit, o contêiner para, mas não é removido. Ele pode ser reiniciado ou removido conforme necessário.
