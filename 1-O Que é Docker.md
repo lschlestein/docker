@@ -74,3 +74,31 @@ Ao executar esse comando, os seguintes passos ocorrem (supondo que você esteja 
 - Uma interface de rede é criada para o contêiner, atribuindo-lhe um endereço IP, permitindo conexões a redes externas.
 - O Docker inicia o contêiner e executa /bin/bash. Como o contêiner está interativo e conectado ao terminal (devido aos sinalizadores -i e -t), você pode interagir com ele via teclado enquanto a saída é registrada no terminal.
 - Ao encerrar o comando /bin/bash com exit, o contêiner para, mas não é removido. Ele pode ser reiniciado ou removido conforme necessário.
+
+## Vantagens
+*Portabilidade:* Aplicativos em contêineres podem ser executados em qualquer ambiente que suporte Docker, seja no laptop de um desenvolvedor, em servidores locais ou na nuvem.
+
+*Consistência:* Contêineres garantem que o aplicativo funcione da mesma forma em diferentes ambientes, eliminando problemas de dependência.
+
+*Eficiência:* Contêineres são leves e utilizam menos recursos do que máquinas virtuais, permitindo maior densidade de aplicativos no mesmo hardware.
+
+*Escalabilidade:* Facilita o escalonamento de aplicativos para atender às demandas de negócios de maneira rápida e eficiente.
+
+*Ciclo de Desenvolvimento Rápido:* Melhora a integração e a entrega contínua (CI/CD), reduzindo o tempo entre desenvolvimento, teste e produção.
+
+*Isolamento:* Contêineres fornecem um ambiente isolado, aumentando a segurança e minimizando conflitos entre aplicativos.
+
+## Desvantagens
+*Curva de Aprendizado:* Dominar Docker e suas ferramentas associadas pode ser desafiador, especialmente para aqueles que não estão familiarizados com contêineres e virtualização.
+
+*Sobrecarga de Contêineres:* Executar muitos contêineres em um único host pode levar a problemas de desempenho se os recursos do sistema não forem gerenciados adequadamente.
+
+*Persistência de Dados:* Gerenciar dados persistentes pode ser complicado, pois contêineres são efêmeros por natureza. É necessário configurar volumes e estratégias de backup adequadas.
+
+*Segurança:* Embora os contêineres ofereçam isolamento, eles compartilham o kernel do host, o que pode representar riscos de segurança se não forem configurados e atualizados corretamente.
+
+*Compatibilidade de Sistema Operacional:* Docker é mais eficiente em sistemas baseados em Linux. No Windows e Mac, ele utiliza uma VM para criar um ambiente Linux, o que pode introduzir uma camada adicional de complexidade e possíveis problemas de desempenho.
+
+*Complexidade de Orquestração:* Em ambientes de produção com muitos contêineres, gerenciar e orquestrar esses contêineres pode se tornar complexo, exigindo ferramentas adicionais como Kubernetes.
+
+*Sobreposição de Rede:* Configurar e gerenciar redes de contêineres pode ser complicado, especialmente em ambientes distribuídos ou em nuvem.
