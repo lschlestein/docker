@@ -3,7 +3,7 @@
 Para que possamos criar nossa imagem, precisaremos basicamente de dois arquivos.
 O primeiro é o Dockerfile.
 Nesse arquivo estão contidas informações que são importantes para o Docker criar nossa imagem corretamente.
-Voce pode pegar esses arquivos [aqui](/docker/tree/main/MySql-Image)
+Voce pode pegar esses arquivos [aqui](https://github.com/lschlestein/docker/tree/main/MySql-Image)
 
 `filename: Dockerfile`
 ```Dockerfile
