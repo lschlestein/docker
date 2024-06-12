@@ -1,7 +1,7 @@
 ## **3-Docker Compose**
 Outra maneira de criar um container é através do docker compose.
 Com o compose, podemos criar um container, com suas configurações pré-definidas em um arquivo .yml
-Em seguida faremos a criação de um container dessa forma.
+Em seguida faremos a criação de um container dessa forma. Arquivo está [aqui](https://github.com/lschlestein/docker/blob/main/MySql-Image/mysql.yml).
 
 `filename: mysql.yml`
 ```yml
