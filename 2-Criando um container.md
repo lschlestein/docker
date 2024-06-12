@@ -79,6 +79,9 @@ Para criar uma database Postgres, ficaria da seguinte forma:
 ```cmd
 docker run --name postgresDB -p 5432:5432 -v /tmp/database:/var/lib/postgresql/data -e POSTGRES_PASSWORD=1234 -d postgres
 ```
+No IntelliJ
+![image](https://github.com/lschlestein/docker/assets/103784532/b290994d-70cc-4ea4-abb1-b05e9b252e16)
+
 
 
 
