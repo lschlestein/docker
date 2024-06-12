@@ -18,3 +18,13 @@ https://docs.docker.com/engine/install/
 Obtenha diversas imagens para criação dos mais diversos tipos de containers para suas aplicações. Também é possível criar os seus próprios containers.
 
 https://hub.docker.com/
+
+Fontes:
+[Subindo um banco de dados MySQL em um container Docker](https://johnfercher.medium.com/mysql-docker-7ff6d50d6cf1)
+[Docker Hub Official Images MySQL](https://hub.docker.com/_/mysql)
+[Docker Hub Official Images Postgres](https://hub.docker.com/_/postgres)
+
+[Como rodar um banco de dados Postgres com Docker](https://felixgilioli.medium.com/como-rodar-um-banco-de-dados-postgres-com-docker-6aecf67995e1)
+
+[How to Use the Postgres Docker Official Image](https://www.docker.com/blog/how-to-use-the-postgres-docker-official-image/)
+
