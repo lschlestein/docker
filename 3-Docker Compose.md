@@ -13,7 +13,7 @@ services:
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: dockerDatabase
+      MYSQL_DATABASE: DOCKERDB
       MYSQL_USER: admin 
       MYSQL_PASSWORD: root
     ports:
