@@ -9,7 +9,6 @@
 
 [Criando uma imagem através de um DockerFile ](https://github.com/lschlestein/docker/blob/main/4-Criando%20uma%20Imagem%20Atrav%C3%A9s%20de%20um%20Dockerfile.md)
 
-Material recomendado:
 
 ### Site oficial para download e instalação da ferramenta:
 https://docs.docker.com/engine/install/
@@ -19,9 +18,12 @@ Obtenha diversas imagens para criação dos mais diversos tipos de containers pa
 
 https://hub.docker.com/
 
-Fontes:
+## Fontes:
+
 [Subindo um banco de dados MySQL em um container Docker](https://johnfercher.medium.com/mysql-docker-7ff6d50d6cf1)
+
 [Docker Hub Official Images MySQL](https://hub.docker.com/_/mysql)
+
 [Docker Hub Official Images Postgres](https://hub.docker.com/_/postgres)
 
 [Como rodar um banco de dados Postgres com Docker](https://felixgilioli.medium.com/como-rodar-um-banco-de-dados-postgres-com-docker-6aecf67995e1)
