@@ -64,7 +64,16 @@ docker run -d -p 3306:3306 seu_nome_de_usuario/mysql_db
 ```
 
 Verifique se você está logado no Docker Hub, assim é possível fazer o `push` dessa imagem para nosso repositório no Hub agora:
+
 ```cmd
 docker push nome_de_seu_usuario/imagem
 ```
+
+Talvez seja necessário criar um token em: Account Settings > Security > New Access Token.
+Para logar via prompt
+```cmd
+docker login -u seu_usuario_aqui
+```
+O prompt solicitará o token que você criou
+
 Como dito anteriormente, é importante que o repositório do Hub e sua imagem tenha o mesmo nome.
