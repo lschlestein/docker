@@ -63,7 +63,7 @@ create table Funcionario(
 ```
 Inserindo um registro para teste
 ``` sql
-INSERT INTO Funcionario VALUES (1, "Lucas Alberto", "lucas@mail.com");
+INSERT INTO Funcionario VALUES (1, 'Lucas Alberto', 'lucas@mail.com');
 ```
 Verificando registros
 ```
