@@ -1,4 +1,6 @@
 # docker
+![image](https://github.com/lschlestein/docker/assets/103784532/2a15e921-327e-4e47-8fd2-a56c90420a6a)
+
 Uma breve introdução sobre Docker
 Material recomendado:
 
