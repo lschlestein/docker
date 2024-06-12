@@ -30,3 +30,5 @@ https://hub.docker.com/
 
 [How to Use the Postgres Docker Official Image](https://www.docker.com/blog/how-to-use-the-postgres-docker-official-image/)
 
+[Docker Initial Commands](https://www.geeksforgeeks.org/docker-instruction-commands/)
+
