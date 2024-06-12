@@ -37,4 +37,44 @@ CONTAINER ID   IMAGE     COMMAND                  CREATED         STATUS        
 86cd4c7e0eaf   mysql     "docker-entrypoint.s…"   2 minutes ago   Up 2 minutes   0.0.0.0:3306->3306/tcp, 33060/tcp   mysqlContainer
 ```
 
+Para verificar se conseguimos manpular nossa database, iremos utlizar o IntelliJ, porém, é possível conectar de forma normal através de qualquer software ou aplicação, utlizando as portas e senhas configuradas na criação do container.
+Buscar a aba databases a direita da janela principal do IntelliJ
+![image](https://github.com/lschlestein/docker/assets/103784532/3c0a59cf-f05a-41d6-80ed-f3c78a15fa3f)
+
+No incone +, adicione uma nova conexão com um banco MySQL, que foi o que acabamos de instanciar no Docker.
+![image](https://github.com/lschlestein/docker/assets/103784532/aade848d-a0a7-44bf-b291-83d467792ace)
+
+Insira os dados de porta, usuário, senha e database, anteriormente configurados em nosso container.
+![image](https://github.com/lschlestein/docker/assets/103784532/80bbf635-31e8-4534-8cf3-de3a4108a0e9)
+
+Teste a conexão antes de finalizar:
+![image](https://github.com/lschlestein/docker/assets/103784532/f7a4e45e-0c1c-4fdb-9694-aad49ccb6146)
+
+Agora é possível criar tabelas e fazer consultas via Query Console
+![image](https://github.com/lschlestein/docker/assets/103784532/91be9fb7-1386-4d36-bb0b-a24e67e92ca2)
+
+``` sql
+create table Funcionario(
+    FuncionarioID INT,
+    Nome VARCHAR(100),
+    Email VARCHAR(100),
+    PRIMARY KEY(FuncionarioID)
+);
+```
+Inserindo um registro para teste
+``` sql
+INSERT INTO Funcionario VALUES (1, "Lucas Alberto", "lucas@mail.com");
+```
+Verificando registros
+```
+SELECT * FROM Funcionario;
+```
+![image](https://github.com/lschlestein/docker/assets/103784532/9eab77b1-9ffc-43ca-bc23-32e38015fff0)
+
+
+
+
+
+
+
 
