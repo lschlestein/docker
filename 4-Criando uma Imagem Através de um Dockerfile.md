@@ -39,9 +39,21 @@ Vá até o Hub do Docker https://hub.docker.com/ e crie um novo repositório.
 Caso não tenha uma conta no Docker, crie-a;
 
 Via terminal, dentro do diretório em que os arquivos foram criados, e digite:
+Observe o ponto ao final da linha de comando
 ```cmd
-C:\mysql> docker build -t seu_nome_de_usuario/mysql_db
+C:\mysql> docker build -t seu_nome_de_usuario/mysql_db .
 ```
+Para verificar se a imagem foi criada:
+```cmd
+C:\mysql>docker images --all
+```
+```cmd
+REPOSITORY             TAG       IMAGE ID       CREATED          SIZE
+lschlestein/mysql_db   latest    790132c6c2cf   31 seconds ago   623MB
+mysql                  latest    8251f0669c6e   6 weeks ago      623MB
+ubuntu                 latest    bf3dc08bfed0   6 weeks ago      76.2MB
+```
+
 É importante fazer a build de sua imagem, observando a sintaxe: `user/nome_imagem`, senão será necessário adicionar uma tag ao seu repositório local;
 
 Feita a build de nossa imagem, é possível agora criar uma instância dela:
