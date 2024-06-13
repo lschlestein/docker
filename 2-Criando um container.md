@@ -76,8 +76,8 @@ Para criar uma database Postgres, ficaria da seguinte forma:
 - A porta 5432 do container será redirecionada para a porta 5432 de nosso computador;
 - O parâmetro -v cria um volume para salvar os dados de nossas tabelas dentro do armazenamento de nosso container
 - Senha=1234
-- postgres (indica qual imagem queremos instanciar)
 - -d detached (Para não ficar com o terminal preso durante execução do container)
+- postgres (indica qual imagem queremos instanciar)
 ```cmd
 docker run --name postgresDB -p 5432:5432 -v /tmp/database:/var/lib/postgresql/data -e POSTGRES_PASSWORD=1234 -d postgres
 ```
