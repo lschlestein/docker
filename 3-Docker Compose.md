@@ -5,19 +5,30 @@ Em seguida faremos a criação de um container dessa forma. Arquivo está [aqui]
 
 `filename: mysql.yml`
 ```yml
-version: '3.1'
 services:
   db:
     image: mysql:latest
-    command: --default-authentication-plugin=mysql_native_password
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: DOCKERDB
-      MYSQL_USER: admin 
-      MYSQL_PASSWORD: root
+      MYSQL_DATABASE: 'DOCKERDB'
+      # Cria um usuário de nome admin
+      MYSQL_USER: 'admin'
+      # Define a senha para o usuário admin
+      MYSQL_PASSWORD: 'root'
+      # Define a senha do usuário root
+      MYSQL_ROOT_PASSWORD: 'root'
     ports:
-    - 3306:3306
+      # <Porta hospedeiro> : <Porta do container>
+      - '3306:3306'
+    expose:
+      # Abre a porta 3306 no container
+      - '3306'
+      # Volume para armazenar os dados
+    volumes:
+      - mysql-db:/var/lib/mysql
+# Nome do volume criado
+volumes:
+  mysql-db:
 ```
 
 Assim conseguimos criar um container, com todas as configurações pré-definidas em um arquivo .yml
