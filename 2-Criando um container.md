@@ -22,7 +22,7 @@ Após isso iremos criar um container do MySQL, com as seguintes configurações:
 - mysql (indica qual imagem queremos instanciar)
 
 ```cmd
-docker run -d --name mysqlContainer -p 3306:3306 -e MYSQL_ROOT_PASSWORD=root -e MYSQL_DATABASE=DOCKERDB -e MYSQL_USER=admin -e MYSQL_PASSWORD=root mysql
+docker run -d --name mysqlContainer -p 3306:3306 -e MYSQL_ROOT_PASSWORD=root -e MYSQL_DATABASE=dockerDatabase -e MYSQL_USER=admin -e MYSQL_PASSWORD=root mysql
 ```
 ```cmd
 86cd4c7e0eaf47a2bffa7e652d3054817c9b8d55b4fdd89b7e80af9cfc084c41
