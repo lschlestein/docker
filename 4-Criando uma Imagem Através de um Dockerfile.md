@@ -13,6 +13,7 @@ ENV MYSQL_USER=admin
 ENV MYSQL_PASSWORD=root
 COPY ./SQL_Initiaze.sql /docker-entrypoint-initdb.d/
 ```
+No arquivo acima estamos, obtendo a imagem mais recente do Mysql. Em seguinda definimos as váriaves de ambiente de nossa imagem. Por último é feita a cópia do arquivo de nosso diretório para o diretório /docker-entrypoint-initdb.d/ de nossa imagem.
 O segundo arquivo, é onde ficaram os scripts SQL, para criação de nossa database, tabelas, e valores padrão conforme necessário para nossa aplicação.
 
 `filename: SQL_initialize.sql`
