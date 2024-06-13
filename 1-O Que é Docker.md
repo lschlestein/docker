@@ -74,7 +74,12 @@ Ao executar esse comando, os seguintes passos ocorrem (supondo que você esteja 
 - Uma interface de rede é criada para o contêiner, atribuindo-lhe um endereço IP, permitindo conexões a redes externas.
 - O Docker inicia o contêiner e executa /bin/bash. Como o contêiner está interativo e conectado ao terminal (devido aos sinalizadores -i e -t), você pode interagir com ele via teclado enquanto a saída é registrada no terminal.
 - Ao encerrar o comando /bin/bash com exit, o contêiner para, mas não é removido. Ele pode ser reiniciado ou removido conforme necessário.
+  É possível acessar novamente o container criando recentemente da seguinte forma:
 
+``` bash
+docker exec -it container_id bash
+```
+  
 ## Vantagens
 *Portabilidade:* Aplicativos em contêineres podem ser executados em qualquer ambiente que suporte Docker, seja no laptop de um desenvolvedor, em servidores locais ou na nuvem.
 
