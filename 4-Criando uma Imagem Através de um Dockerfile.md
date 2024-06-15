@@ -78,3 +78,17 @@ docker login -u seu_usuario_aqui
 O prompt solicitará o token que você criou
 
 Como dito anteriormente, é importante que o repositório do Hub e sua imagem tenha o mesmo nome.
+
+Exemplo para criação de um DockerFile para execução de uma aplicação Java:
+```Dockerfile
+FROM maven:3.8.6-jdk-11 as build
+COPY src /app/src
+COPY pom.xml /app
+WORKDIR /app
+RUN mvn clean install
+FROM openjdk:8-jre-alpine
+COPY --from=build /app/target/calculadoraIMC-1.0-SNAPSHOT.jar /app/calculadora.jar
+WORKDIR /app
+# Arrays de comandos para executar a aplicação calculadora.java
+CMD ["java", "-jar", "calculadora.jar"]
+```
